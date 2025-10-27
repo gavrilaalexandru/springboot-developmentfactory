@@ -20,7 +20,7 @@ public class Employee {
     private String lastName;
     private int age;
     private String emailAddress;
-    private String homeAddres;
+    private String homeAddress;
     private String role;
 
     public Long getId() {
@@ -41,7 +41,7 @@ public class Employee {
         this.lastName = lastName;
         this.age = age;
         this.emailAddress = emailAddress;
-        this.homeAddres = homeAddres;
+        this.homeAddress = homeAddres;
         this.role = role;
     }
 
@@ -73,12 +73,12 @@ public class Employee {
         this.emailAddress = emailAddress;
     }
 
-    public String getHomeAddres() {
-        return homeAddres;
+    public String getHomeAddress() {
+        return homeAddress;
     }
 
-    public void setHomeAddres(String homeAddres) {
-        this.homeAddres = homeAddres;
+    public void setHomeAddress(String homeAddress) {
+        this.homeAddress = homeAddress;
     }
 
     public String getRole() {
