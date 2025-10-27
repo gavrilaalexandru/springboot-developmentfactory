@@ -22,7 +22,8 @@ public class EmployeeController {
                 "bogdan@email.com", "Bucuresti", "Software Developer"),
                 new Employee("Alex", "Mihai", 25,
                         "alex@email.com", "Bucuresti", "Ethical Hacker"),
-                new Employee("Virgil", "Bosk", 31, "virgil@email.com", "Ukraine", "QA Tester")
+                new Employee("Virgil", "Bosk", 31,
+                        "virgil@email.com", "Ukraine", "QA Tester")
                 );
     }
 }
