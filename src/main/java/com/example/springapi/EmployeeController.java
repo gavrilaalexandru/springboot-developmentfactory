@@ -10,20 +10,14 @@ import java.util.List;
 @RequestMapping(path = "/api/v1/employees")
 public class EmployeeController {
 
-//    @GetMapping
-//    public Employee getEmployee() {
-//        return new Employee("Bogdan", "Petre", 22,
-//                "bogdan@email.com", "Bucuresti", "programmer");
-//    }
+    private final EmployeeRepository employeeRepository;
+
+    public EmployeeController(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
 
     @GetMapping
-    public List<Employee> getEmployee() {
-        return List.of(new Employee("Bogdan", "Petre", 22,
-                "bogdan@email.com", "Bucuresti", "Software Developer"),
-                new Employee("Alex", "Mihai", 25,
-                        "alex@email.com", "Bucuresti", "Ethical Hacker"),
-                new Employee("Virgil", "Bosk", 31,
-                        "virgil@email.com", "Ukraine", "QA Tester")
-                );
+    public List<Employee> getEmployees() {
+        return employeeRepository.findAll();
     }
 }

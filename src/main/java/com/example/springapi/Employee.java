@@ -1,12 +1,31 @@
 package com.example.springapi;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "employees")
 public class Employee {
+
+    @Id
+    @SequenceGenerator(
+            name = "employee_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            generator = "employee_sequence",
+            strategy = GenerationType.SEQUENCE
+    )
+    private Long id;
     private String firstName;
     private String lastName;
     private int age;
     private String emailAddress;
     private String homeAddres;
     private String role;
+
+    public Long getId() {
+        return id;
+    }
 
     public String getFirstName() {
         return firstName;
